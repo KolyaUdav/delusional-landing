@@ -209,10 +209,36 @@ body {
     width: 300px;
     height: 300px;
     margin-left: 10px;
-    background-position: center;
-    background-size: cover;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+    background: rgb(55 56 48);
+}
+
+.cover-card {
+    width:  100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #1f1e1a;
+    background-position: center;
+    background-size: cover;
+}
+
+.content-news-card {
+    color: #fff;
+    padding: 10px;
+}
+
+.title-content-news-card {
+    font-size: 1.1em;
+}
+
+.text-content-news-card {
+    margin-top: 10px;
+    font-size: 0.8em;
 }
 
 .last-news-card:hover .news-hover {
@@ -224,18 +250,23 @@ body {
     margin-left: 0;
 }
 
-.news-hover {
-    background-color: #1f1e1a;
-    height: 300px;
-    opacity: 0.7;
-}
-
 .title-date-container {
     position: absolute;
     z-index: 3;
     bottom: 10%;
     left: 5%;
     margin-left: 15px;
+}
+
+.news-hover {
+    width: 100%;
+    height: 300px;
+    background: #000;
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
 }
 
 .news-title {
