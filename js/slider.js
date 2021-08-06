@@ -38,6 +38,7 @@ function slider() {
      * clickPrevBtn(currentSlide)
      */
     function changeSlide(elementId, switchSlideFn) {
+
         let previousSlide = currentSlide;
 
         currentSlide = switchSlideFn(currentSlide);
@@ -127,6 +128,6 @@ function slider() {
         });
     }
 
-    uiElements.prevBtn.addEventListener('click', () => {changeSlide(uiElements.prevBtn.getAttribute('id'), clickPrevBtn)});
-    uiElements.nextBtn.addEventListener('click', () => {changeSlide(uiElements.nextBtn.getAttribute('id'), clickNextBtn)});
+    uiElements.prevBtn.addEventListener('click', (e) => {changeSlide(e.currentTarget.getAttribute('id'), clickPrevBtn)});
+    uiElements.nextBtn.addEventListener('click', (e) => {changeSlide(e.currentTarget.getAttribute('id'), clickNextBtn)});
 };
